@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>919175317555-sfjd8lefjch9ug6bj212cl0qjdr4m8d5.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.919175317555-sfjd8lefjch9ug6bj212cl0qjdr4m8d5</string>
+	<key>API_KEY</key>
+	<string>AIzaSyBcxnC3Fcp2_K8UmRXiSFZbZSB8B_BXXzE</string>
+	<key>GCM_SENDER_ID</key>
+	<string>919175317555</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.sport.coacher</string>
+	<key>PROJECT_ID</key>
+	<string>coacher-45a69</string>
+	<key>STORAGE_BUCKET</key>
+	<string>coacher-45a69.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:919175317555:ios:8b2cf0b8657f28ef</string>
+	<key>DATABASE_URL</key>
+	<string>https://coacher-45a69.firebaseio.com</string>
+</dict>
+</plist>
