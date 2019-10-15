@@ -3,6 +3,9 @@ package com.coacher;
 import android.app.Application;
 
 import com.facebook.react.ReactApplication;
+import com.dylanvann.fastimage.FastImageViewPackage;
+import com.reactnativecommunity.webview.RNCWebViewPackage;
+import com.horcrux.svg.SvgPackage;
 import com.oblador.vectoricons.VectorIconsPackage;
 import com.reactnativenavigation.NavigationApplication;
 import com.reactnativenavigation.react.NavigationReactNativeHost;
@@ -42,6 +45,9 @@ public class MainApplication extends NavigationApplication {
         // No need to add RnnPackage and MainReactPackage
         return Arrays.<ReactPackage>asList(
                 new MainReactPackage(),
+            new FastImageViewPackage(),
+            new RNCWebViewPackage(),
+            new SvgPackage(),
             new VectorIconsPackage(),
                 new LottiePackage(),
                 new LinearGradientPackage(),

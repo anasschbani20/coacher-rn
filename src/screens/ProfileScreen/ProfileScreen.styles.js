@@ -1,7 +1,8 @@
 import { StyleSheet } from "react-native";
 import Theme from '../../styles/theme';
+import {appstyles} from '../Screens.styles';
 
-export const styles = StyleSheet.create({
+export const styles = Object.assign(appstyles, StyleSheet.create({
 
     container:{
         flex: 1,
@@ -33,18 +34,29 @@ export const styles = StyleSheet.create({
         marginBottom: 10
     },
     teamContainer:{
-        backgroundColor: Theme.border,
+        backgroundColor: Theme.lightgray,
         width: 75,
         height: 75,
         position: 'relative',
         justifyContent: 'center',
-        alignItems: 'center'
+        alignItems: 'center',
+        borderRadius: 37
+    },
+// {uri:'https://www.api-football.com/public/teams/33.png'}
+    choosenTeam:{
+        position: 'absolute',
+        flex: 1,
+        resizeMode: 'center',
+        width: 75,
+        height: 75,
+        top: 0,
+        left: 0,
     },
     orderteamContainer:{
         position: 'absolute',
         top: -10,
         right: -10,
-        backgroundColor: Theme.mainColor,
+        backgroundColor: Theme.blue,
         width: 30,
         height: 30,
         borderRadius: 15,
@@ -59,17 +71,15 @@ export const styles = StyleSheet.create({
         borderWidth: 1,
         marginTop: 10,
         marginBottom: 10,
-        marginRight: 10,
-        marginLeft: 10,
     },
     teamPickerTitleContainer:{
         flexDirection: 'row',
         alignItems: 'center',
-        paddingTop: 10,
-        paddingBottom: 10,
+        paddingTop: 15,
+        paddingBottom: 15,
         // borderBottomColor: Theme.border,
         // borderBottomWidth: 1,
-        backgroundColor: Theme.mainColor,
+        backgroundColor: Theme.lightgray,
     },
     teamPickerTitleIconContainer:{
         paddingRight: 5,
@@ -84,8 +94,15 @@ export const styles = StyleSheet.create({
         paddingLeft: 5,
     },
     teamPickerTitleText:{
-        color: '#fff',
-        fontSize: 15,
+        // color: '#fff',
+        opacity: .8,
+        fontSize: 18,
+    },
+    selectedTeamIndex:{
+        shadowOpacity: 0.75,
+        shadowRadius: 5,
+        shadowColor: Theme.mainColor,
+        shadowOffset: { height: 0, width: 0 },
     },
     tPlistContainer:{
         height: 280
@@ -107,4 +124,4 @@ export const styles = StyleSheet.create({
         color: '#fff',
         fontSize: 15,
     }
-});
+}));

@@ -11,6 +11,7 @@ export default {
     anonyme: require('./anonyme.png'),
 	rightArrow: require('./rightArrow.png'),
 	emtyState1: require('./emtyState1.png'),
+	previousArrow: require('./previous-arrow.png'),
 }
 
 

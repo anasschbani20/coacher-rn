@@ -21,6 +21,14 @@ export const ScreenOffsets = {
 export default {
   backgroundColor: '#3B7FC9',
   mainColor: '#3B7FC9',
+  lightBlue: '#CBD1DC',
+
+  milkcoffee: '#A58153',
+  yellow: '#F9D001',
+  red: '#EE162A',
+  blue: '#00519D',
+  green: '#009E56',
+  lightgray: '#f5f5f5',
 
   grey: '#333745',
   linkColor: '#4b87a7',

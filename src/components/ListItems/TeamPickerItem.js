@@ -1,13 +1,49 @@
 import React, { Component } from 'react';
 import {View, StyleSheet, Text, Image} from 'react-native';
-import Theme, {Images} from './../../styles/theme';
-
+// import SvgUri from 'react-native-svg-uri';
+// import Image from 'react-native-remote-svg'
+// import Image from 'react-native-remote-svg';
+import SvgUri from 'react-native-fast-svg';
+import DebouncedTouchableOpacity from "../theme/DebouncedTouchableOpacity";
+import FastImage from 'react-native-fast-image'
+import {Images} from "../../styles/theme";
 
 export default class TeamPickerItem extends Component{
 
 
     constructor(props){
         super(props);
+    }
+    // ef39e24b1d0722bf904d99c5f2f56d1e811836b1701ad5324bf9bb9aaeef2cd9
+    // o6bmWv8rUOlE0ToGjUPl1R3vO0hiiD6xEEX8H5pxa6ZIq2mCuWRRrq0k0PeK
+    renderImage(type, item){
+        console.log('renderImage', item);
+        // return <Image source={{uri: item.flag}} style={styles.flagImage} />;
+        {/*<Image source={{uri: item.flag}} style={styles.flagImage} />;*/}
+        if(item && item.flag && item.flag.length>0) {
+            return <SvgUri
+                width={70}
+                height={70}
+                source={{uri: item.flag}}
+            />
+        }
+        if(item && item.logo && item.logo.length>0){
+             return <FastImage
+                 style={styles.flagContainer}
+                width={70}
+                height={70}
+                source={{uri:item.logo}}
+                // source={Images.logo}
+            />
+        }
+
+    }
+
+    renderTitle(type, item){
+        return item.name;
+        // switch(type){
+        //     case 0: return item.country
+        // }
     }
 
     render() {
@@ -19,18 +55,26 @@ export default class TeamPickerItem extends Component{
         //     referee,
         //     award
         // } = this.props.match;
-        return <View style={styles.container}>
+        const {item, type} = this.props.item;
+        console.log('const {item, type}', item);
+        // const type = this.props.type; // [0: coutries]  [1: leages]  [2: teams]
+
+        console.log('TeamPickerItem', item)
+        return <DebouncedTouchableOpacity style={styles.container} onPress={()=>this.props.onPress()}>
             <View style={styles.flagContainer}>
-                <Image source={{uri: 'https://www.comprarbanderas.es/images/banderas/400/21938-raja-club-athletic_400px.jpg'}}
-                        style={styles.flagImage}
-                />
+                {
+                    this.renderImage(type, item)
+                }
             </View>
             <View style={styles.nameContainer}>
-                <Text style={styles.nameText}>Morocco</Text>
+                <Text style={styles.nameText}>{item.name}</Text>
             </View>
-        </View>
+        </DebouncedTouchableOpacity>
     }
 }
+
+
+
 
 const styles = StyleSheet.create({
    container:{
@@ -47,11 +91,10 @@ const styles = StyleSheet.create({
        marginRight: 20,
     },
     flagImage:{
-        height: '100%',
-        resizeMode: 'contain'
+        resizeMode: 'center',
     },
     nameContainer:{
-
+        // backgroundColor: 'red'
     },
     nameText:{
        fontSize: 17,

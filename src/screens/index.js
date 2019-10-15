@@ -9,18 +9,14 @@ import AuthScreen from './AuthScreen/AuthScreen';
 import HomeScreen from './HomeScreen/HomeScreen';
 import ListFormationsScreen from './ListFormationsScreen/ListFormationsScreen';
 import ProfileScreen from './ProfileScreen/ProfileScreen';
-import HomeView from '../components/routes/HomeView';
 import InitializingScreen from "./InitializingScreen/InitializingScreen";
-// import LoginView from '../components/routes/LoginView';
 
 export default routes = {
    'App.Initializing': InitializingScreen,
    'App.Login': AuthScreen,
-   'App.Home': HomeScreen,//HomeView,//HomeScreen,
+   'App.Home': HomeScreen,
    'App.ListFormations': ListFormationsScreen,
    'App.Profile': ProfileScreen,
-  //  'App.Home': HomeView,
-  // 'App.Login': LoginView,
 }
 
 // Register all screens of the app (including internal ones)

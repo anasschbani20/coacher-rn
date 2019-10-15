@@ -7,7 +7,7 @@ import MatchItem from "../../components/ListItems/MatchItem";
 
 @inject('appState')
 @observer
-export default class HomeView extends Component {
+export default class HomeScreen extends Component {
     static options(){
         return {
             _statusBar: {
